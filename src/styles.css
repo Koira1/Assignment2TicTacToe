@@ -2,14 +2,6 @@ body {
   font-family: sans-serif;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
 .cell_x {
   background-color: rgb(124, 252, 0);
   width: 59px;
