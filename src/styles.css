@@ -28,11 +28,7 @@ table {
   vertical-align: center;
   font-size: 30px;
 }
-#board {
-  padding: 0px;
-  margin: 0 auto;
-  margin-top: 25px;
-}
+
 #board tr td {
   width: 59px;
   height: 59px;
