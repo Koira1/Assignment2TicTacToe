@@ -109,7 +109,6 @@ function luoPoyta() {
     rivi.className = "row";
     for (var j = 0; j < size; j++) {
       var lokero = document.createElement("td");
-      lokero.className = "td";
       lokero.id = "C" + counter;
       counter++;
       rivi.appendChild(lokero);
