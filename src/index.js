@@ -30,9 +30,8 @@ function onClickTable(event) {
   id = startTimer();
   if (who === 1) {
     document.getElementById(event.target.id).innerHTML = "X";
-    document
-      .getElementById(event.target.id)
-      .setAttribute("style", "background-color: #7efc00");
+    var element = document.getElementById(event.target.id);
+    element.className = "cell_x";
     var cell = event.target.id;
     cell = cell.replace("C", "");
     var rowcolumn = parseInt(cell, 10);
@@ -40,9 +39,8 @@ function onClickTable(event) {
     checkWinner("X");
   } else {
     document.getElementById(event.target.id).innerHTML = "Y";
-    document
-      .getElementById(event.target.id)
-      .setAttribute("style", "background-color: #fa8072");
+    var element1 = document.getElementById(event.target.id);
+    element1.className = "cell_y";
     cell = event.target.id;
     cell = cell.replace("C", "");
     rowcolumn = parseInt(cell, 10);

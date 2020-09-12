@@ -10,7 +10,24 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
+.cell_x {
+  background-color: rgb(124, 252, 0);
+  width: 59px;
+  height: 59px;
+  text-align: center;
+  vertical-align: center;
+  font-family: Helvetica;
+  font-size: 30px;
+}
+.cell_y {
+  background-color: rgb(250, 128, 114);
+  font-family: Helvetica;
+  width: 59px;
+  height: 59px;
+  text-align: center;
+  vertical-align: center;
+  font-size: 30px;
+}
 #board {
   padding: 0px;
   margin: 0 auto;
