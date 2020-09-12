@@ -1,5 +1,5 @@
 import "./styles.css";
-
+luoPoyta();
 var div = document.getElementById("board");
 var playerTurn = 0;
 var playArray = [];
@@ -96,45 +96,28 @@ function checkWinner(player) {
     }
   }
 }
-
-div.innerHTML =
-  '<table id="board">\
-<tr class="row" id="row1">\
- <td id="C0"></td>\
-  <td id="C1"></td>\
-  <td id="C2"></td>\
-  <td id="C3"></td>\
-  <td id="C4"></td>\
-</tr>\
-<tr class="row" id="row2">\
-<td id="C5"></td>\
-  <td id="C6"></td>\
-  <td id="C7"></td>\
-  <td id="C8"></td>\
-  <td id="C9"></td>\
-</tr>\
-<tr class="row" id="row3">\
-<td id="C10"></td>\
-  <td id="C11"></td>\
-  <td id="C12"></td>\
-  <td id="C13"></td>\
-  <td id="C14"></td>\
-</tr>\
-<tr class="row" id="row4">\
-<td id="C15"></td>\
-  <td id="C16"></td>\
-  <td id="C17"></td>\
-  <td id="C18"></td>\
-  <td id="C19"></td>\
-</tr>\
-<tr class="row" id="row5">\
-<td id="C20"></td>\
-  <td id="C21"></td>\
-  <td id="C22"></td>\
-  <td id="C23"></td>\
-  <td id="C24"></td>\
-</tr>\
-</table>';
+function luoPoyta() {
+  var size = 5;
+  var counter = 0;
+  var poyta = document.getElementById("board");
+  //poyta.setAttribute("border", "1");
+  //poyta.setAttribute("width", "500");
+  //poyta.setAttribute("height", "500");
+  var tpoyta = document.createElement("tbody");
+  for (var i = 0; i < size; i++) {
+    var rivi = document.createElement("tr");
+    rivi.className = "row";
+    for (var j = 0; j < size; j++) {
+      var lokero = document.createElement("td");
+      lokero.className = "td";
+      lokero.id = "C" + counter;
+      counter++;
+      rivi.appendChild(lokero);
+    }
+    tpoyta.appendChild(rivi);
+  }
+  poyta.appendChild(tpoyta);
+}
 
 var rows = document.getElementsByClassName("row");
 for (var i = 0; i < rows.length; i++) {

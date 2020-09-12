@@ -2,6 +2,22 @@ body {
   font-family: sans-serif;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.cell {
+  width: 59px;
+  height: 59px;
+  text-align: center;
+  vertical-align: center;
+  font-family: Helvetica;
+  font-size: 30px;
+}
 .cell_x {
   background-color: rgb(124, 252, 0);
   width: 59px;
