@@ -28,8 +28,9 @@ function onClickTable(event) {
   var who = player();
   clearInterval(id);
   id = startTimer();
+  console.log("What the fuck");
   if (who === 1) {
-    document.getElementById(event.target.id).innerHTML = "X";
+    document.getElementById(event.target.id).innerHTML = "x";
     var element = document.getElementById(event.target.id);
     element.className = "cell_x";
     var cell = event.target.id;
@@ -38,7 +39,7 @@ function onClickTable(event) {
     playArray[rowcolumn] = "X";
     checkWinner("X");
   } else {
-    document.getElementById(event.target.id).innerHTML = "Y";
+    document.getElementById(event.target.id).innerHTML = "o";
     var element1 = document.getElementById(event.target.id);
     element1.className = "cell_y";
     cell = event.target.id;
@@ -47,7 +48,6 @@ function onClickTable(event) {
     playArray[rowcolumn] = "Y";
     checkWinner("Y");
   }
-  console.log(event.target.id);
 }
 
 function player() {
@@ -76,15 +76,12 @@ function checkWinner(player) {
     [20, 16, 12, 8, 4]
   ];
   for (var win of winningCombos) {
-    console.log(win);
     var count = 0;
     for (var index of win) {
-      console.log(index);
       if (playArray[index] !== player) {
         break;
       } else {
         count++;
-        console.log("count: " + count);
       }
     }
     if (count === 5) {
@@ -119,6 +116,7 @@ function luoPoyta() {
 }
 
 var rows = document.getElementsByClassName("row");
+console.log(rows);
 for (var i = 0; i < rows.length; i++) {
   rows[i].addEventListener(
     "click",
