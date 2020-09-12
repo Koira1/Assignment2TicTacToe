@@ -28,7 +28,6 @@ function onClickTable(event) {
   var who = player();
   clearInterval(id);
   id = startTimer();
-  console.log("What the fuck");
   if (who === 1) {
     document.getElementById(event.target.id).innerHTML = "x";
     var element = document.getElementById(event.target.id);
