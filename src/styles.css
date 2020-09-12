@@ -34,15 +34,10 @@ table {
   margin-top: 25px;
 }
 #board tr td {
-  width: 60px;
-  height: 60px;
+  width: 59px;
+  height: 59px;
   border-collapse: collapse;
   border: 1px solid black;
   font-family: Helvetica;
-  text-align: center;
   font-size: 30px;
-}
-#board tr td:hover {
-  background: #e4e4e4;
-  cursor: pointer;
 }
